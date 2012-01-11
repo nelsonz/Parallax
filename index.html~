@@ -1,0 +1,63 @@
+<html>
+<head>
+<script type="text/javascript" src="lib/jquery.min.js"></script>
+<script type="text/javascript" src="parallax.js"></script>
+<script type="text/javascript">
+$(function() {
+	$(document).click(function() {
+		$('#container').append($('<div class="parallax item'+Math.ceil(Math.random()*3)+'"></div>').attr('data-pos', 10-Math.random()*20).css({
+			left: Math.random()*800,
+			right: Math.random()*800}));
+		registerObject($('#container').children().last());
+	});
+});
+</script>
+
+<style>
+.item1 {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	border: 2px solid black;
+	left: 175px;
+	top: 175px;
+	background-color: blue;
+}
+
+.item2 {
+	position: absolute;
+	width: 75px;
+	height: 75px;
+	border: 3px solid black;
+	left: 300px;
+	top: 300px;
+	background-color: red;
+}
+
+.item3 {
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	border: 2px solid black;
+	left: 200px;
+	top: 200px;
+	background-color: yellow;
+}
+</style>
+
+</head>
+<body>
+
+<div id="parallax-parameters" data-origin=0 data-x_ratio=10 data-y_ratio=10></div>
+
+<div id="container">
+	<div class="parallax item1" data-pos=1></div>
+	<div class="parallax item2" data-pos=-3></div>
+	<div class="parallax item3" data-pos=-1></div>
+</div>
+
+<item1>
+
+
+</body>
+</html>

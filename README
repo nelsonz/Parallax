@@ -1,0 +1,7 @@
+A quick JQuery-based script to easily recreate the parallax effects on Github's 404 page.
+Requires JQuery.
+
+Usage: 
+Create a div with id "parallax-parameters" and attributes data-origin, data-x-ratio, data-y-ratio to easily store the origin and shift ratios.
+All elements under the .parallax class are moveable, and require an attribute data-pos, which will determine the amount it shifts relative to data-origin.
+If an element is dynamically inserted at any point and needs to be moveable, register it using registerObject(element).
